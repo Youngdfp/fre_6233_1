@@ -17,6 +17,10 @@ namespace fre::bsm {
 			double R = exp(r * t); //!!! implement this
 			double f = R*S0; //!!! implement this
 			double s = σ*sqrt(t); //!!! implement this
+			R = std::exp(r * t);
+			f = R*S0;
+			s = σ*std::sqrt(t);
+			
 
 			return fre::black::put::value(f, s, k)/R;
 		}
